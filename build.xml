@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="nsen_batch">
+    <property environment="env"/>
+    <property name="nsen.location" value="../nsen"/>
+    <property name="ECLIPSE_HOME" value="../../eclipse"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <property name="lib.dir" location="lib" />
+    <path id="Maven 依存関係.libraryclasspath">
+        <pathelement location="../../../.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar"/>
+        <pathelement location="../../../.m2/repository/cglib/cglib-nodep/2.1_3/cglib-nodep-2.1_3.jar"/>
+        <pathelement location="../../../.m2/repository/commons-logging/commons-logging/1.1/commons-logging-1.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/easymock/easymock/2.4/easymock-2.4.jar"/>
+        <pathelement location="../../../.m2/repository/org/easymock/easymockclassextension/2.4/easymockclassextension-2.4.jar"/>
+        <pathelement location="../../../.m2/repository/org/freemarker/freemarker/2.3.13/freemarker-2.3.13.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/geronimo/specs/geronimo-annotation_1.0_spec/1.0/geronimo-annotation_1.0_spec-1.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/geronimo/specs/geronimo-jpa_3.0_spec/1.0/geronimo-jpa_3.0_spec-1.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.0/geronimo-jta_1.1_spec-1.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/geronimo/specs/geronimo-servlet_2.4_spec/1.0/geronimo-servlet_2.4_spec-1.0.jar"/>
+        <pathelement location="../../../.m2/repository/com/h2database/h2/1.0.69/h2-1.0.69.jar"/>
+        <pathelement location="../../../.m2/repository/jboss/javassist/3.4.ga/javassist-3.4.ga.jar"/>
+        <pathelement location="../../../.m2/repository/junit/junit/4.4/junit-4.4.jar"/>
+        <pathelement location="../../../.m2/repository/log4j/log4j/1.2.13/log4j-1.2.13.jar"/>
+        <pathelement location="../../../.m2/repository/ognl/ognl/2.6.9-patch-20090427/ognl-2.6.9-patch-20090427.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/poi/poi/3.0-FINAL/poi-3.0-FINAL.jar"/>
+        <pathelement location="../../../.m2/repository/org/seasar/container/s2-extension/2.4.45/s2-extension-2.4.45.jar"/>
+        <pathelement location="../../../.m2/repository/org/seasar/container/s2-framework/2.4.45/s2-framework-2.4.45.jar"/>
+        <pathelement location="../../../.m2/repository/org/seasar/container/s2-tiger/2.4.45/s2-tiger-2.4.45.jar"/>
+        <pathelement location="../../../.m2/repository/org/seasar/container/s2jdbc-gen/2.4.45/s2jdbc-gen-2.4.45.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/ant/ant/1.7.0/ant-1.7.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/ant/ant-launcher/1.7.0/ant-launcher-1.7.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/tmatesoft/svnkit/svnkit/1.2.0.4949/svnkit-1.2.0.4949.jar"/>
+        <pathelement location="../../../.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar"/>
+        <pathelement location="../../../.m2/repository/org/twitter4j/twitter4j-core/4.0.1/twitter4j-core-4.0.1.jar"/>
+        <pathelement location="../../../.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar"/>
+        <pathelement location="../../../.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/httpcomponents/httpclient/4.2/httpclient-4.2.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/httpcomponents/httpcore/4.2/httpcore-4.2.jar"/>
+        <pathelement location="../../../.m2/repository/net/arnx/jsonic/1.3.0/jsonic-1.3.0.jar"/>
+        <pathelement location="../../../.m2/repository/xerces/xercesImpl/2.4.0/xercesImpl-2.4.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar"/>
+        <pathelement location="../../../.m2/repository/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar"/>
+    </path>
+    <path id="nsen_batch.classpath">
+        <pathelement location="target/classes"/>
+        <pathelement location="target/test-classes"/>
+        <pathelement location="lib/aopalliance-1.0.jar"/>
+        <pathelement location="lib/cglib-nodep-2.1_3.jar"/>
+        <pathelement location="lib/commons-logging-1.1.jar"/>
+        <pathelement location="lib/easymock-2.4.jar"/>
+        <pathelement location="lib/easymockclassextension-2.4.jar"/>
+        <pathelement location="lib/freemarker-2.3.13.jar"/>
+        <pathelement location="lib/geronimo-annotation_1.0_spec-1.0.jar"/>
+        <pathelement location="lib/geronimo-jpa_3.0_spec-1.0.jar"/>
+        <pathelement location="lib/geronimo-jta_1.1_spec-1.0.jar"/>
+        <pathelement location="lib/geronimo-servlet_2.4_spec-1.0.jar"/>
+        <pathelement location="lib/h2-1.0.69.jar"/>
+        <pathelement location="lib/javassist-3.4.ga.jar"/>
+        <pathelement location="lib/junit-4.4.jar"/>
+        <pathelement location="lib/log4j-1.2.13.jar"/>
+        <pathelement location="lib/ognl-2.6.9-patch-20090427.jar"/>
+        <pathelement location="lib/poi-3.0-FINAL.jar"/>
+        <pathelement location="lib/s2-extension-2.4.45.jar"/>
+        <pathelement location="lib/s2-framework-2.4.45.jar"/>
+        <pathelement location="lib/s2-tiger-2.4.45.jar"/>
+        <pathelement location="lib/s2jdbc-gen-2.4.45.jar"/>
+        <pathelement location="lib/svnkit-1.2.0.4949.jar"/>
+        <pathelement location="lib/mysql-connector-java-5.1.25-bin.jar"/>
+        <pathelement location="lib/nico-api-client-1.0-SNAPSHOT.jar"/>
+        <path refid="Maven 依存関係.libraryclasspath"/>
+    </path>
+    <path id="run.NicoNicoLogicTest.classpath">
+        <path refid="nsen_batch.classpath"/>
+        <path refid="Maven 依存関係.libraryclasspath"/>
+    </path>
+    <path id="run.NicoNicoLogicTest.testGetVideoInfo.classpath">
+        <path refid="nsen_batch.classpath"/>
+        <path refid="Maven 依存関係.libraryclasspath"/>
+    </path>
+    <path id="run.NicoNicoLogicTest.testGetVideoInfo2.classpath">
+        <path refid="nsen_batch.classpath"/>
+        <path refid="Maven 依存関係.libraryclasspath"/>
+    </path>
+    <path id="run.NsenMain.classpath">
+        <path refid="nsen_batch.classpath"/>
+        <path refid="Maven 依存関係.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <mkdir dir="target/test-classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/resources">
+                <include name="**/*.java"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/resources">
+                <include name="**/*.java"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+        <delete dir="target/test-classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/main/java"/>
+            <src path="src/main/resources"/>
+            <include name="**/*.java"/>
+            <classpath refid="nsen_batch.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/test-classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/test/java"/>
+            <src path="src/test/resources"/>
+            <include name="**/*.java"/>
+            <classpath refid="nsen_batch.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects">
+        <ant antfile="build.xml" dir="${nsen.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.xml" dir="${nsen.location}" inheritAll="false" target="build">
+            <propertyset>
+                <propertyref name="build.compiler"/>
+            </propertyset>
+        </ant>
+    </target>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="NicoNicoLogicTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="net.tiger.star.nsen.logic.NicoNicoLogicTest" todir="${junit.output.dir}"/>
+            <classpath refid="run.NicoNicoLogicTest.classpath"/>
+        </junit>
+    </target>
+    <target name="NicoNicoLogicTest.testGetVideoInfo">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="net.tiger.star.nsen.logic.NicoNicoLogicTest" todir="${junit.output.dir}"/>
+            <classpath refid="run.NicoNicoLogicTest.testGetVideoInfo.classpath"/>
+        </junit>
+    </target>
+    <target name="NicoNicoLogicTest.testGetVideoInfo2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="net.tiger.star.nsen.logic.NicoNicoLogicTest" todir="${junit.output.dir}"/>
+            <classpath refid="run.NicoNicoLogicTest.testGetVideoInfo2.classpath"/>
+        </junit>
+    </target>
+    <target name="NsenMain">
+        <path id="lib.path">
+            <fileset dir="${lib.dir}" includes="**/*.jar" />
+        </path>
+
+        <pathconvert property="lib" refid="lib.path" dirsep="/" pathsep=" ">
+            <map from="${lib.dir}${file.separator}" to="./lib/" />
+        </pathconvert>
+        <jar basedir="target/classes" destfile="jar/NsenMain.jar">
+            <manifest>
+                 <attribute name="Main-Class" value="net.tiger.star.nsen.main.NsenMain"/>
+                 <attribute name="Class-Path" value="./ ${lib}"/>
+           </manifest>
+        </jar>
+        <!--
+        <java classname="net.tiger.star.nsen.main.NsenMain" failonerror="true" fork="yes">
+            <classpath refid="run.NsenMain.classpath"/>
+        </java>
+        -->
+    </target>
+
+   <target name="copyLib">
+        <!-- 本番環境用設定ファイルコピー -->
+        <copy todir="target/classes" overwrite="true">
+            <fileset dir="src/main/resources/production"></fileset>
+        </copy>
+
+        <!-- libコピー -->
+        <copy todir="jar/lib" overwrite="true">
+            <fileset dir="lib"></fileset>
+            <fileset dir="Maven 依存関係.libraryclasspath"></fileset>
+        </copy>
+    </target>
+
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>

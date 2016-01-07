@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="getplayerstatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stream"/>
+        <xs:element ref="user"/>
+        <xs:element ref="rtmp"/>
+        <xs:element ref="ms"/>
+        <xs:element ref="tid_list"/>
+        <xs:element ref="twitter"/>
+        <xs:element ref="player"/>
+        <xs:element ref="ns"/>
+        <xs:element ref="marquee"/>
+      </xs:sequence>
+      <xs:attribute name="status" use="required" type="xs:NCName"/>
+      <xs:attribute name="time" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stream">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="title"/>
+        <xs:element ref="description"/>
+        <xs:element ref="provider_type"/>
+        <xs:element ref="default_community"/>
+        <xs:element ref="international"/>
+        <xs:element ref="is_owner"/>
+        <xs:element ref="owner_id"/>
+        <xs:element ref="owner_name"/>
+        <xs:element ref="is_reserved"/>
+        <xs:element ref="watch_count"/>
+        <xs:element ref="comment_count"/>
+        <xs:element ref="base_time"/>
+        <xs:element ref="open_time"/>
+        <xs:element ref="start_time"/>
+        <xs:element ref="end_time"/>
+        <xs:element ref="is_rerun_stream"/>
+        <xs:element ref="is_archiveplayserver"/>
+        <xs:element ref="bourbon_url"/>
+        <xs:element ref="full_video"/>
+        <xs:element ref="after_video"/>
+        <xs:element ref="before_video"/>
+        <xs:element ref="kickout_video"/>
+        <xs:element ref="twitter_tag"/>
+        <xs:element ref="danjo_comment_mode"/>
+        <xs:element ref="infinity_mode"/>
+        <xs:element ref="archive"/>
+        <xs:element ref="press"/>
+        <xs:element ref="plugin_delay"/>
+        <xs:element ref="plugin_url"/>
+        <xs:element ref="plugin_urls"/>
+        <xs:element ref="allow_netduetto"/>
+        <xs:element ref="nd_token"/>
+        <xs:element ref="ng_scoring"/>
+        <xs:element ref="is_nonarchive_timeshift_enabled"/>
+        <xs:element ref="is_timeshift_reserved"/>
+        <xs:element ref="header_comment"/>
+        <xs:element ref="footer_comment"/>
+        <xs:element ref="split_bottom"/>
+        <xs:element ref="split_top"/>
+        <xs:element ref="background_comment"/>
+        <xs:element ref="font_scale"/>
+        <xs:element ref="comment_lock"/>
+        <xs:element ref="telop"/>
+        <xs:element ref="contents_list"/>
+        <xs:element ref="picture_url"/>
+        <xs:element ref="thumb_url"/>
+        <xs:element ref="is_priority_prefecture"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id" type="xs:NCName"/>
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="description" type="xs:string"/>
+  <xs:element name="provider_type" type="xs:NCName"/>
+  <xs:element name="default_community">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="international" type="xs:integer"/>
+  <xs:element name="is_owner" type="xs:integer"/>
+  <xs:element name="owner_id" type="xs:integer"/>
+  <xs:element name="owner_name">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="is_reserved" type="xs:integer"/>
+  <xs:element name="watch_count" type="xs:integer"/>
+  <xs:element name="comment_count" type="xs:integer"/>
+  <xs:element name="base_time" type="xs:integer"/>
+  <xs:element name="open_time" type="xs:integer"/>
+  <xs:element name="start_time" type="xs:integer"/>
+  <xs:element name="end_time" type="xs:integer"/>
+  <xs:element name="is_rerun_stream" type="xs:integer"/>
+  <xs:element name="is_archiveplayserver" type="xs:integer"/>
+  <xs:element name="bourbon_url" type="xs:anyURI"/>
+  <xs:element name="full_video" type="xs:anyURI"/>
+  <xs:element name="after_video">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="before_video">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="kickout_video" type="xs:anyURI"/>
+  <xs:element name="twitter_tag" type="xs:string"/>
+  <xs:element name="danjo_comment_mode" type="xs:integer"/>
+  <xs:element name="infinity_mode" type="xs:integer"/>
+  <xs:element name="archive" type="xs:integer"/>
+  <xs:element name="press">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="display_lines"/>
+        <xs:element ref="display_time"/>
+        <xs:element ref="style_conf"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="display_lines" type="xs:integer"/>
+  <xs:element name="display_time" type="xs:integer"/>
+  <xs:element name="style_conf">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="plugin_delay">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="plugin_url">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="plugin_urls">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="allow_netduetto" type="xs:integer"/>
+  <xs:element name="nd_token" type="xs:string"/>
+  <xs:element name="ng_scoring" type="xs:integer"/>
+  <xs:element name="is_nonarchive_timeshift_enabled" type="xs:integer"/>
+  <xs:element name="is_timeshift_reserved" type="xs:integer"/>
+  <xs:element name="header_comment" type="xs:integer"/>
+  <xs:element name="footer_comment" type="xs:integer"/>
+  <xs:element name="split_bottom" type="xs:integer"/>
+  <xs:element name="split_top" type="xs:integer"/>
+  <xs:element name="background_comment" type="xs:integer"/>
+  <xs:element name="font_scale">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="comment_lock" type="xs:integer"/>
+  <xs:element name="telop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="enable"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enable" type="xs:integer"/>
+  <xs:element name="contents_list">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="contents"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="contents">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:NMTOKEN">
+          <xs:attribute name="disableAudio" use="required" type="xs:integer"/>
+          <xs:attribute name="disableVideo" use="required" type="xs:integer"/>
+          <xs:attribute name="duration" use="required" type="xs:integer"/>
+          <xs:attribute name="id" use="required" type="xs:NCName"/>
+          <xs:attribute name="start_time" use="required" type="xs:integer"/>
+          <xs:attribute name="title" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="picture_url" type="xs:anyURI"/>
+  <xs:element name="thumb_url" type="xs:anyURI"/>
+  <xs:element name="is_priority_prefecture">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="user">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="user_id"/>
+        <xs:element ref="nickname"/>
+        <xs:element ref="is_premium"/>
+        <xs:element ref="userAge"/>
+        <xs:element ref="userSex"/>
+        <xs:element ref="userDomain"/>
+        <xs:element ref="userPrefecture"/>
+        <xs:element ref="userLanguage"/>
+        <xs:element ref="room_label"/>
+        <xs:element ref="room_seetno"/>
+        <xs:element ref="twitter_info"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="user_id" type="xs:integer"/>
+  <xs:element name="nickname" type="xs:NCName"/>
+  <xs:element name="is_premium" type="xs:integer"/>
+  <xs:element name="userAge" type="xs:integer"/>
+  <xs:element name="userSex" type="xs:integer"/>
+  <xs:element name="userDomain" type="xs:NCName"/>
+  <xs:element name="userPrefecture" type="xs:integer"/>
+  <xs:element name="userLanguage" type="xs:NCName"/>
+  <xs:element name="room_label" type="xs:NCName"/>
+  <xs:element name="room_seetno" type="xs:integer"/>
+  <xs:element name="twitter_info">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="status"/>
+        <xs:element ref="screen_name"/>
+        <xs:element ref="followers_count"/>
+        <xs:element ref="is_vip"/>
+        <xs:element ref="profile_image_url"/>
+        <xs:element ref="after_auth"/>
+        <xs:element ref="tweet_token"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="status" type="xs:NCName"/>
+  <xs:element name="screen_name" type="xs:NCName"/>
+  <xs:element name="followers_count" type="xs:integer"/>
+  <xs:element name="is_vip" type="xs:integer"/>
+  <xs:element name="profile_image_url" type="xs:anyURI"/>
+  <xs:element name="after_auth" type="xs:integer"/>
+  <xs:element name="tweet_token" type="xs:string"/>
+  <xs:element name="rtmp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="url"/>
+        <xs:element ref="ticket"/>
+      </xs:sequence>
+      <xs:attribute name="is_fms" use="required" type="xs:integer"/>
+      <xs:attribute name="rtmpt_port" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="url" type="xs:anyURI"/>
+  <xs:element name="ticket" type="xs:string"/>
+  <xs:element name="ms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="addr"/>
+        <xs:element ref="port"/>
+        <xs:element ref="thread"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addr" type="xs:NCName"/>
+  <xs:element name="port" type="xs:integer"/>
+  <xs:element name="thread" type="xs:integer"/>
+  <xs:element name="tid_list">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="twitter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="live_enabled"/>
+        <xs:element ref="vip_mode_count"/>
+        <xs:element ref="live_api_url"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="live_enabled" type="xs:integer"/>
+  <xs:element name="vip_mode_count" type="xs:integer"/>
+  <xs:element name="live_api_url" type="xs:anyURI"/>
+  <xs:element name="player">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="qos_analytics"/>
+        <xs:element ref="dialog_image"/>
+        <xs:element ref="is_notice_viewer_balloon_enabled"/>
+        <xs:element ref="error_report"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="qos_analytics" type="xs:integer"/>
+  <xs:element name="dialog_image">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="oidashi"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="oidashi" type="xs:anyURI"/>
+  <xs:element name="is_notice_viewer_balloon_enabled" type="xs:integer"/>
+  <xs:element name="error_report" type="xs:integer"/>
+  <xs:element name="ns">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="is_ns_stream"/>
+        <xs:element ref="nstype"/>
+        <xs:element ref="nspanel"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="is_ns_stream" type="xs:integer"/>
+  <xs:element name="nstype" type="xs:NCName"/>
+  <xs:element name="nspanel" type="xs:string"/>
+  <xs:element name="marquee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="category"/>
+        <xs:element ref="game_key"/>
+        <xs:element ref="game_time"/>
+        <xs:element ref="force_nicowari_off"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="category">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="game_key" type="xs:NCName"/>
+  <xs:element name="game_time" type="xs:integer"/>
+  <xs:element name="force_nicowari_off" type="xs:integer"/>
+</xs:schema>
